@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@media (max-width: 980px) {
+  #quoterow {
+    padding-top: 0 px;
+  }
+}
+body {
+  background: orange;
+}
+
+#quoterow {
+  padding-top: 50px;
+}
+
+#quotebox {
+  border: 1px solid #000000;
+  font-family: Ubuntu;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px black;
+}
+
+#quotebox quote {
+  font-size: 1.75em;
+  color: orange;
+}
+
+#quotebox i {
+  font-size: 1.0;
+  color: orange;
+}
+
+#quotebox button {
+  background: orange;
+  color: white;
+  margin: 0px 0px 20px 20px;
+}
+
+#twitter {
+  bottom: 0px;
+}
+
+#quotebox author {
+  font-weight: bold;
+  color: orange;
+}

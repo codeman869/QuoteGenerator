@@ -1,0 +1,21 @@
+head
+  meta(http-equiv="Pragma" content="no-cache")
+  meta(http-equiv="Cache-control" content="no-cache")
+  meta(http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT")
+#app.container-fluid(ng-app="quote-gen")
+  #quoterow.row
+    .col-md-4
+    #quotebox.col-md-4(ng-controller="MainController as main") 
+      i.fa.fa-quote-left.fa-lg
+      quote(ng-bind-html="main.quote | HTMLFilter | Html")
+      i.fa.fa-quote-right.fa-lg
+      .row
+        .col-md-offset-4
+          author - {{main.author | Html}}
+      .container-fluid
+        .row
+          .col-md-1
+            i.fa.fa-twitter.fa-3x(id="twitter" ng-click="main.share()")
+          .col-md-2.col-md-offset-7
+            button.btn(id="quoteGetter" ng-click="main.getNewQuote()") New Quote
+    .col-md-4

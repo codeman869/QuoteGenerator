@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Cody</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<head>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Cache-control" content="no-cache"/>
+  <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT"/>
+</head>
+<div id="app" ng-app="quote-gen" class="container-fluid">
+  <div id="quoterow" class="row">
+    <div class="col-md-4"></div>
+    <div id="quotebox" ng-controller="MainController as main" class="col-md-4"> <i class="fa fa-quote-left fa-lg"></i>
+      <quote ng-bind-html="main.quote | HTMLFilter | Html"></quote><i class="fa fa-quote-right fa-lg"></i>
+      <div class="row">
+        <div class="col-md-offset-4">
+          <author>- {{main.author | Html}}</author>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-1"><i id="twitter" ng-click="main.share()" class="fa fa-twitter fa-3x"></i></div>
+          <div class="col-md-2 col-md-offset-7">
+            <button id="quoteGetter" ng-click="main.getNewQuote()" class="btn">New Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+<script src='https://use.fontawesome.com/b7148f7304.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
